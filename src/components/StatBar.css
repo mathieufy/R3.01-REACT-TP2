@@ -1,0 +1,104 @@
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-bar__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-bar__name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    /* text-transform: uppercase;*/
+    letter-spacing: 0.06em;
+    color: #8888a0;
+}
+
+.stat-bar__value {
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.stat-bar__track {
+    height: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.stat-bar__fill {
+    height: 100%;
+    border-radius: 4px;
+    position: relative;
+    transition: width 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: fillIn 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.stat-bar__fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.12) 0%,
+            transparent 60%
+    );
+    pointer-events: none;
+}
+
+@keyframes fillIn {
+    from { width: 0 !important; }
+}
+
+/* ── Type variants ── */
+
+.stat-bar--hp .stat-bar__value {
+    color: #e03030;
+}
+.stat-bar--hp .stat-bar__track {
+    background: #efa7a7;
+}
+.stat-bar--hp .stat-bar__fill {
+    background: linear-gradient(90deg, #b02020, #e03030);
+}
+
+.stat-bar--mana .stat-bar__value {
+    color: #3070e0;
+}
+.stat-bar--mana .stat-bar__track {
+    background: #8facef;
+}
+.stat-bar--mana .stat-bar__fill {
+    background: linear-gradient(90deg, #2050a0, #3070e0);
+}
+
+.stat-bar--stamina .stat-bar__value {
+    color: #30b050;
+}
+.stat-bar--stamina .stat-bar__track {
+    background: #d2f3d9;
+}
+.stat-bar--stamina .stat-bar__fill {
+    background: linear-gradient(90deg, #208030, #30b050);
+}
+
+.stat-bar--xp .stat-bar__value {
+    color: #c0a030;
+}
+.stat-bar--xp .stat-bar__track {
+    background: #f5deba;
+}
+.stat-bar--xp .stat-bar__fill {
+    background: linear-gradient(90deg, #907820, #c0a030);
+}

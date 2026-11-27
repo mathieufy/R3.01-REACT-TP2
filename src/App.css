@@ -1,0 +1,29 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #0e0e12;
+    color: #e4e4e8;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+.proposal {
+    background: #16161d;
+    border: 1px solid #2a2a3a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.proposal-label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #8888a0;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #2a2a3a;
+}
