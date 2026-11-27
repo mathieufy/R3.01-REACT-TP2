@@ -1,6 +1,22 @@
-import StatBar from "./components/StatBar.jsx";
+import StatBars from "./components/StatBars.jsx";
 import './App.css'
 
 export default function App() {
-  return <StatBar name={"John"} current={"12"} max={"55"} type={"xp"}/>;
+  return <StatBars stats={[
+  {
+    name: "John",
+    current: "15",
+    max: "20",
+    type: "stamina"
+  },
+  {
+    name: "Mathieu",
+    current: "20",
+    max: "20",
+    type: "hp"
+  },
+
+  ]}
+  />
+
 }

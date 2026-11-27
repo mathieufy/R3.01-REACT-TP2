@@ -12,7 +12,7 @@ export default function StatBar(
         </div>
         <div className={"stat-bar__track"}>
             <div
-                className={"stat-bar_fill"}
+                className={"stat-bar__fill"}
                 style={{width: `${tauxRemplissage}%`}}></div>
         </div>
     </div>
